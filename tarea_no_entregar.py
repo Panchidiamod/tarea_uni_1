@@ -1,5 +1,13 @@
-# Francisco Galdames 22.175.622-3
-# Richard Paredes 22.731.495-8
+#import pandas as pd
+#import time
+
+tipos_pan=[]
+cantidad_pan=[]
+
+
+
+def gen_produc():
+    pass
 
 while True:
     print("Menu", "\n")
@@ -12,7 +20,7 @@ while True:
     opcion = int(input("\nSeleccione una opcion: "))
 
     if opcion == 1:
-        print("1")
+        gen_produc()
     elif opcion == 2:
         print("2")
     elif opcion == 3:
