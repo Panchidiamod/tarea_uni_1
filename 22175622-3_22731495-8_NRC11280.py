@@ -1,5 +1,5 @@
-# Francisco Galdames 22.175.622-3
-# Richard Paredes 22.731.495-8
+# Francisco Javier Galdames Parra 22175622-3
+# Richard Paredes 22731495-8
 
 matriz = []
 while True:
