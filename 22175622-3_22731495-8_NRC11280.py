@@ -1,8 +1,12 @@
 # Francisco Javier Galdames Parra 22175622-3
-# Richard Paredes 22731495-8
+# Richard Fabian Paredes Gonzáles 22731495-8
+
+nombre_archivo = "MATRIZ.txt"
 
 matriz = []
-print("MENÚ")
+
+print("MENÚ\n")
+ 
 while True:
 
     #print del menu
@@ -30,7 +34,7 @@ while True:
                 fila.append(0)
             matriz.append(fila)
 
-        #imprime la tabla en modo debug (osea solo la tabla, sin decorados)
+        #imprime matriz (DEBUG)
         #for i in matriz:
         #    print(i)
 
@@ -45,7 +49,7 @@ while True:
         for i in range(1, columnas +1):
             dias.append(i)
         print(*dias,sep="\t")
-        #print("-"*(16+columnas*8))
+
         pan_id = 1
         for i in matriz:
             print("tipo de pan",str(pan_id),end="")
