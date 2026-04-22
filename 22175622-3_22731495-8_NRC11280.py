@@ -37,8 +37,18 @@ while True:
 
         #Tabla para el usuario
         print("Tabla de produccion")
+        print("\n")
+
+        print("Dia"," " * 11, end=" ")
+        for dia in range(1, columnas +1):
+            print(dia," "*5, end= " ")
+        print()
+        print("-" * 50)
+        pan_id = 0
         for i in matriz:
-            print("tipo de panes",*i)
+            print("tipo de pan","(" + str(pan_id) + ")",end="")
+            print("",*i, sep="\t")
+            pan_id += 1
 
     elif opcion == 2:
         print("2")
