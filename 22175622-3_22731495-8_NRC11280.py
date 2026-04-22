@@ -2,53 +2,57 @@
 # Richard Paredes 22731495-8
 
 matriz = []
+print("MENÚ")
 while True:
 
     #print del menu
 
-    print("#"*5,"Menu","#"*5, "\n")
-    print(" 1.Generar plan de produccion",
-          " 2.ingresar cantidad de panes producidos",
-          " 3.vizualizar ingresp total",
-          " 4.Visualiza Ingreso total por dia",
+    print("SISTEMA DE PLANIFICACIÓN DE PRODUCCIÓN DE PAN")
+    print(" 1.Generar plan de producción",
+          " 2.Ingresar cantidad de panes producidos",
+          " 3.Visualizar ingreso total por tipo de pan",
+          " 4.Visualizar Ingreso total por dia",
           " 5.Salir del programa",
           sep="\n")
-    opcion = int(input("\nSeleccione una opcion: "))
+    opcion = int(input("\nSeleccione su opcion: "))
 
     #generador de array para la tabla de produccion
     #solo se genera la tabla, no los indicadores de esta(dias y tipos)
 
     if opcion == 1:
 
-        filas = int(input("inserte cuantos tipos de pan quiere ingresar: "))
-        columnas = int(input("inserte cuantos dias quiere ver en la tabla de datos: "))
-
+        filas = int(input("Ingrese número de tipo de panes: "))
+        columnas = int(input("Ingrese número de dias de produccion: "))
+        print()
         for i in range(filas):
             fila = []
             for j in range(columnas):
                 fila.append(0)
             matriz.append(fila)
 
-        #imprime la tabla en modo debug (osea solo la tabla sin datos)
-        for i in matriz:
-            print(i)
+        #imprime la tabla en modo debug (osea solo la tabla, sin decorados)
+        #for i in matriz:
+        #    print(i)
 
-        print("\n")
+        #print("\n")
 
         #Tabla para el usuario
-        print("Tabla de produccion")
-        print("\n")
-
-        print("Dia"," " * 11, end=" ")
-        for dia in range(1, columnas +1):
-            print(dia," "*5, end= " ")
-        print()
-        print("-" * 50)
-        pan_id = 0
+        dias = []
+        print("Plan de producción")
+ 
+        print("*"*(16+columnas*8),"\n")
+        print(" " * 16, end="")
+        for i in range(1, columnas +1):
+            dias.append(i)
+        print(*dias,sep="\t")
+        #print("-"*(16+columnas*8))
+        pan_id = 1
         for i in matriz:
-            print("tipo de pan","(" + str(pan_id) + ")",end="")
+            print("tipo de pan",str(pan_id),end="")
             print("",*i, sep="\t")
             pan_id += 1
+
+        print("*"*(16+ columnas*8),"\n")
 
     elif opcion == 2:
         print("2")
