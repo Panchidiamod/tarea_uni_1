@@ -1,3 +1,6 @@
+"""Integrantes Francisco Galdames, Richard Paredes
+Fecha de entrega:"""
+
 #import pandas as pd
 #import time
 
@@ -6,8 +9,9 @@ cantidad_pan=[]
 
 
 
-def gen_produc():
-    pass
+def gen_produc(fila, columna):
+    """Funcion usada para retorna una matriz
+    en base a 2 datos de entrada, Filas Y columnas"""
 
 while True:
     print("Menu", "\n")
@@ -20,7 +24,9 @@ while True:
     opcion = int(input("\nSeleccione una opcion: "))
 
     if opcion == 1:
-        gen_produc()
+        columna = int(input("Cuantos dias quiere visializar en la tabla"))
+        fila = int(input("Cuantas variedades de pan quiere"))
+        gen_produc(fila, columna)
     elif opcion == 2:
         print("2")
     elif opcion == 3:
