@@ -59,7 +59,21 @@ while True:
         print("*"*(16+ columnas*8),"\n")
 
     elif opcion == 2:
-        print("2")
+        pan_id = 1
+        for i in range(len(matriz)):
+            print("\n Tipo de pan",str(pan_id))
+            pan_id += 1
+            precio = int(input("Ingrese el precio de la unidad de pan $: "))
+            for j in range(len(matriz[i])):
+                while True:
+                    print("Ingrese cantidad de panes producidos en el día", str(j),":",end="")
+                    cantidad = int(input())
+                    if cantidad >=1000 and cantidad <=2000:
+                        break
+                    else:
+                        print("Error, la cantidad de panes a producir por día ")
+                matriz[i][j] = cantidad
+
     elif opcion == 3:
         print("3")
     elif opcion == 4:
