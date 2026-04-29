@@ -1,4 +1,5 @@
 import os
+
 #Fuciones
 def generador_tabla(filas:int, columnas:int, matriz):
     # Esta funcion genera la matriz con los datos en 0
@@ -29,6 +30,7 @@ def tabla_usuario(matriz):
         print("", *i,sep="\t")
         pan_id +=1
     print("*"*(16+len(matriz[0])*8))
+
 
 #Variables
 ARCHIVO = "tabla.txt" #path al Archivo
