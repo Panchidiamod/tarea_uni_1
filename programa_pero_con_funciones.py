@@ -34,14 +34,16 @@ def tabla_usuario(matriz):
 
 #Variables
 ARCHIVO = "tabla.txt" #path al Archivo
+MATRIZ = []
 
 #If para ver si exciste el archivo.txt para usar ese como matriz
 if os.path.exists(ARCHIVO):
-    MATRIZ = []
+    matriz_texto = open(ARCHIVO,"r")
 else:
-    MATRIZ= []
+    open(ARCHIVO,"x")
 
 
+#cuerpo del programa
 while True:
     print("SISTEMA DE PLANIFICACIÓN DE PRODUCCIÓN DE PAN")
     print(" 1.Generar plan de producción",
@@ -80,6 +82,7 @@ while True:
                         print("Error, la cantidad de panes a producir por día ")
                 MATRIZ[i][j] = cantidad
         tabla_usuario(MATRIZ)
+
 
     elif opcion == '3':
         print()
