@@ -93,7 +93,3 @@ while True:
         break
     else:
         print("ERROR: Ingrese un valor valido")
-
-
-
-print("hola")
