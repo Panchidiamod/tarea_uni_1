@@ -35,12 +35,15 @@ def tabla_usuario(matriz):
 #Variables
 ARCHIVO = "tabla.txt" #path al Archivo
 MATRIZ = []
+existe_archivo = os.path.exists(ARCHIVO)
 
 #If para ver si exciste el archivo.txt para usar ese como matriz
-if os.path.exists(ARCHIVO):
-    matriz_texto = open(ARCHIVO,"r")
+if existe_archivo:
+    #matriz_texto = open(ARCHIVO,"r")
+    pass
 else:
-    open(ARCHIVO,"x")
+    archivo = open(ARCHIVO,"x")
+    archivo.close()
 
 
 #cuerpo del programa
@@ -54,16 +57,16 @@ while True:
           sep="\n")
     opcion = input("\nSeleccione su opcion: ")
 
-    if opcion == '1' and os.path.exists(ARCHIVO):
+    if opcion == '1' and existe_archivo:
         opcion_alerta = input("ATENCION, YA EXISTE UNA TABLA DE DATOS, desea continuar(s/N) ")
 
-    elif opcion == '1' and (not os.path.exists(ARCHIVO)):
+    elif opcion == '1' and (not existe_archivo):
         ca_Tipo_pan = int(input("Ingrese Número de tipos de panes: "))
         ca_dias = int(input("Ingrese Número de días de produccion: "))
         print()
-        
+
         generador_tabla(ca_Tipo_pan,ca_dias,MATRIZ)
-        
+
         tabla_usuario(MATRIZ)
 
     elif opcion == '2':
@@ -83,6 +86,8 @@ while True:
                 MATRIZ[i][j] = cantidad
         tabla_usuario(MATRIZ)
 
+        for i in MATRIZ:
+            print(i)
 
     elif opcion == '3':
         print()
