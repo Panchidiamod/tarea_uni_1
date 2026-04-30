@@ -57,10 +57,7 @@ while True:
           sep="\n")
     opcion = input("\nSeleccione su opcion: ")
 
-    if opcion == '1' and existe_archivo:
-        opcion_alerta = input("ATENCION, YA EXISTE UNA TABLA DE DATOS, desea continuar(s/N) ")
-
-    elif opcion == '1' and (not existe_archivo):
+    if opcion == '1':
         ca_Tipo_pan = int(input("Ingrese Número de tipos de panes: "))
         ca_dias = int(input("Ingrese Número de días de produccion: "))
         print()
