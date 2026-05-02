@@ -73,6 +73,8 @@ while True:
                     else:
                         print("Error, la cantidad de panes a producir por día ")
                 matriz[i][j] = cantidad
+        for i in matriz:
+            print(i)
 
     elif opcion == 3:
         print("3")
